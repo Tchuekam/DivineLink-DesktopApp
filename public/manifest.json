@@ -1,0 +1,63 @@
+{
+  "name": "DivineLink - Dossier Médical",
+  "short_name": "DivineLink",
+  "description": "Dossier médical électronique hors-ligne pour cliniques. Fonctionne sans internet.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f5f7fa",
+  "theme_color": "#0c7bb3",
+  "lang": "fr",
+  "categories": ["medical", "health", "productivity"],
+  "icons": [
+    {
+      "src": "/favicon-16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Patients",
+      "short_name": "Patients",
+      "url": "/?page=patients",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Rendez-vous",
+      "short_name": "Agenda",
+      "url": "/?page=appointments",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    }
+  ],
+  "prefer_related_applications": false
+}

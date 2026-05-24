@@ -1,0 +1,36 @@
+name: Build Desktop App
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Install Node dependencies
+        run: npm install
+
+      - name: Build Desktop App
+        run: npm run tauri build
+
+      - name: Upload Windows MSI Installer
+        uses: actions/upload-artifact@v4
+        with:
+          name: DivineLink-Windows-Installer
+          path: src-tauri/target/release/bundle/msi/*.msi
+          retention-days: 30

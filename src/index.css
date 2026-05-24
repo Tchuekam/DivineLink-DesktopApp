@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 215 25% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+    --primary: 199 89% 38%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 168 60% 42%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 210 15% 93%;
+    --muted-foreground: 215 15% 50%;
+    --accent: 199 30% 90%;
+    --accent-foreground: 199 89% 25%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 20% 88%;
+    --input: 214 20% 88%;
+    --ring: 199 89% 38%;
+    --radius: 0.625rem;
+    --sidebar-background: 199 89% 15%;
+    --sidebar-foreground: 199 10% 90%;
+    --sidebar-primary: 168 60% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 199 50% 22%;
+    --sidebar-accent-foreground: 199 10% 90%;
+    --sidebar-border: 199 40% 25%;
+    --sidebar-ring: 168 60% 50%;
+    --success: 142 72% 40%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --info: 199 89% 48%;
+    --info-foreground: 0 0% 100%;
+    --tooth-healthy: 142 72% 65%;
+    --tooth-caries: 0 72% 60%;
+    --tooth-filled: 199 70% 55%;
+    --tooth-extracted: 215 15% 60%;
+    --tooth-crown: 38 92% 55%;
+    --tooth-default: 210 15% 93%;
+  }
+
+  .dark {
+    --background: 215 25% 10%;
+    --foreground: 210 20% 92%;
+    --card: 215 25% 13%;
+    --card-foreground: 210 20% 92%;
+    --popover: 215 25% 13%;
+    --popover-foreground: 210 20% 92%;
+    --primary: 199 89% 48%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 168 60% 42%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 215 20% 18%;
+    --muted-foreground: 215 15% 55%;
+    --accent: 199 30% 20%;
+    --accent-foreground: 199 89% 70%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 215 20% 22%;
+    --input: 215 20% 22%;
+    --ring: 199 89% 48%;
+    --sidebar-background: 215 30% 8%;
+    --sidebar-foreground: 210 15% 85%;
+    --sidebar-primary: 168 60% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 215 25% 15%;
+    --sidebar-accent-foreground: 210 15% 85%;
+    --sidebar-border: 215 20% 18%;
+    --sidebar-ring: 168 60% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .tooth-btn {
+    @apply cursor-pointer transition-all duration-200 hover:scale-110;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white;
+    color: black;
+  }
+}

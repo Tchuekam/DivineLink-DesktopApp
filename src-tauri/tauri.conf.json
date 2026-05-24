@@ -1,0 +1,27 @@
+{
+  "build": {
+    "distDir": "../dist",
+    "devPath": "http://localhost:8080",
+    "beforeBuildCommand": "npm run build",
+    "beforeDevCommand": "npm run dev"
+  },
+  "package": {
+    "productName": "DivineLink",
+    "version": "0.1.0"
+  },
+  "tauri": {
+    "windows": [
+      {
+        "title": "DivineLink",
+        "width": 1280,
+        "height": 768,
+        "resizable": true,
+        "fullscreen": false
+      }
+    ],
+    "bundle": {
+      "identifier": "com.clinic.divinelink",
+      "icon": ["icons/icon.ico"]
+    }
+  }
+}
