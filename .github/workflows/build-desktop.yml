@@ -28,9 +28,12 @@ jobs:
       - name: Build Desktop App
         run: npx tauri build
 
-      - name: Upload Windows MSI Installer
+      - name: Upload Windows Desktop Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: DivineLink-Windows-Installer
-          path: src-tauri/target/release/bundle/msi/*.msi
+          name: DivineLink-Windows-Desktop
+          path: |
+            src-tauri/target/release/*.exe
+            src-tauri/target/release/bundle/msi/*.msi
+          if-no-files-found: error
           retention-days: 30
